@@ -3,36 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { NopagesfoundComponent } from './pages/nopagesfound/nopagesfound.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { SidebarComponent } from './share/sidebar/sidebar.component';
-import { BreadcrumbsComponent } from './share/breadcrumbs/breadcrumbs.component';
-import { HeadersComponent } from './share/headers/headers.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Grafica1Component } from './pages/grafica1/grafica1.component';
-import { PagesComponent } from './pages/pages.component';
+import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './share/shared.module';
+import { AuthModule } from './auth/auth.module';
+import { ThemeService } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    NopagesfoundComponent,
-    DashboardComponent,
-    SidebarComponent,
-    BreadcrumbsComponent,
-    HeadersComponent,
-    ProgressComponent,
-    Grafica1Component,
-    PagesComponent
+    NopagesfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule,
+    SharedModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [
+    ThemeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
