@@ -8,6 +8,7 @@ import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './share/shared.module';
 import { AuthModule } from './auth/auth.module';
 import { ThemeService } from 'ng2-charts';
+import { SettingsService } from './services/settings.service';
 
 @NgModule({
   declarations: [

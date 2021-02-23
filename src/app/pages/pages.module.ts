@@ -9,19 +9,22 @@ import { ProgressComponent } from './progress/progress.component';
 import { SharedModule } from '../share/shared.module';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    AccountSettingsComponent
   ],
   exports: [
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
     DashboardComponent,
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,
